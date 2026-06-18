@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandeep | Sky is Limit Mentorship</title>
+    <style>
+        /* Mobile-First Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a; /* Modern Dark Mode Background */
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Profile Section */
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid #38bdf8;
+            margin-bottom: 16px;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        p.bio {
+            font-size: 1rem;
+            color: #94a3b8;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        /* Button Grid */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px;
+            background-color: #1e293b;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            transition: all 0.2s ease;
+        }
+
+        .link-btn:hover, .link-btn:active {
+            background-color: #38bdf8;
+            border-color: #38bdf8;
+            color: #0f172a;
+            transform: translateY(-2px);
+        }
+
+        /* Specific Button Accents */
+        .btn-whatsapp { border-left: 4px solid #25D366; }
+        .btn-booking { border-left: 4px solid #8b5cf6; }
+        .btn-payment { border-left: 4px solid #f59e0b; }
+        .btn-email { border-left: 4px solid #ef4444; }
+
+        /* Footer & Disclaimer */
+        .disclaimer {
+            margin-top: 40px;
+            padding: 15px;
+            font-size: 0.75rem;
+            line-height: 1.4;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+            text-align: justify;
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. Your Profile Picture -->
+        <img src="https://ui-avatars.com/api/?name=Sandeep+Vinci&background=38bdf8&color=fff&size=200" alt="Sandeep Vinci" class="profile-img">
+        
+        <!-- 2. Your Name and Bio -->
+        <h1>Sandeep Vinci</h1>
+        <p class="bio">IT Professional & Tech Mentor.<br>Helping you map out your career transition.</p>
+
+        <!-- 3. The Action Links -->
+        <div class="links-container">
+            
+            <!-- Booking Link -->
+            <a href="https://cal.com/sandeepvinci44" class="link-btn btn-booking" target="_blank" rel="noopener noreferrer">
+                🗓️ Book a Mentorship Slot
+            </a>
+
+            <!-- WhatsApp Deep Link -->
+            <a href="https://wa.me/918466816623?text=Hi%20Sandeep,%20I%20saw%20your%20Shorts%20and%20want%20to%20know%20more%20about%20mentorship!" class="link-btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                💬 Chat on WhatsApp
+            </a>
+
+            <!-- UPI Deep Link -->
+            <!-- IMPORTANT: Replace sandeepvinci@okhdfcbank below with your actual UPI ID -->
+            <a href="upi://pay?pa=sandeepvinci@okhdfcbank&pn=Sandeep%20Vinci&cu=INR" class="link-btn btn-payment">
+                💳 Secure Payment via UPI
+            </a>
+
+            <!-- Email Link -->
+            <a href="mailto:sandeepvinci063@gmail.com?subject=Sky Is Limit Mentorship Inquiry" class="link-btn btn-email">
+                ✉️ Send an Email
+            </a>
+
+        </div>
+
+        <!-- 4. Legal Disclaimer -->
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> We are fully committed to providing you with high-quality strategic guidance, resume reviews, and interview prep to maximize your success. However, final admissions and hiring decisions rest solely with the respective universities and companies. We do not guarantee jobs or university admissions. Your success depends on your background, effort, and individual performance.
+        </div>
+
+        <div class="footer">
+            © 2026 Sky is Limit
+        </div>
+    </div>
+
+</body>
+</html>
