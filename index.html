@@ -40,8 +40,88 @@
   }
 
   .container{
+    position:relative;
+    z-index:1;
     width:100%;
     max-width:420px;
+  }
+
+  /* ---------- Sky background (clouds + plane) ---------- */
+
+  .sky-bg{
+    position:fixed;
+    inset:0;
+    z-index:0;
+    overflow:hidden;
+    pointer-events:none;
+  }
+
+  .cloud{
+    position:absolute;
+    width:140px;
+    height:46px;
+    background:rgba(140,185,220,0.10);
+    border-radius:50px;
+    filter:blur(8px);
+    transform:translateX(-25vw);
+    animation:drift linear infinite;
+  }
+  .cloud::before, .cloud::after{
+    content:"";
+    position:absolute;
+    background:inherit;
+    border-radius:50%;
+  }
+  .cloud::before{ width:72px; height:72px; top:-32px; left:14px; }
+  .cloud::after{ width:50px; height:50px; top:-20px; right:16px; }
+
+  .cloud-1{ top:9%;  transform:scale(1.25) translateX(-25vw); animation-duration:54s; animation-delay:-8s; }
+  .cloud-2{ top:21%; transform:scale(0.95) translateX(-25vw); animation-duration:78s; animation-delay:-34s; opacity:0.8; }
+  .cloud-3{ top:33%; transform:scale(0.75) translateX(-25vw); animation-duration:62s; animation-delay:-2s;  opacity:0.65; }
+
+  @keyframes drift{
+    from{ transform:translateX(-25vw); }
+    to{ transform:translateX(125vw); }
+  }
+
+  .plane-group{
+    position:absolute;
+    width:90px;
+    height:30px;
+    top:0;
+    left:0;
+    animation:fly 24s linear infinite;
+    animation-delay:1s;
+    opacity:0;
+  }
+
+  .trail{
+    position:absolute;
+    top:50%;
+    right:24px;
+    width:58px;
+    height:2px;
+    transform:translateY(-50%);
+    background:linear-gradient(to left, rgba(56,189,248,0.55), transparent);
+    border-radius:2px;
+  }
+
+  .plane-icon{
+    position:absolute;
+    right:0;
+    top:3px;
+    width:22px;
+    height:22px;
+    color:var(--brand);
+    transform:rotate(90deg);
+  }
+
+  @keyframes fly{
+    0%   { transform:translate(-15vw, 72vh); opacity:0; }
+    8%   { opacity:0.85; }
+    50%  { transform:translate(55vw, 22vh); }
+    92%  { opacity:0.85; }
+    100% { transform:translate(122vw, -6vh); opacity:0; }
   }
 
   /* ---------- Header ---------- */
@@ -233,10 +313,24 @@
 
   @media (prefers-reduced-motion: reduce){
     .link-btn{ transition:none; }
+    .cloud{ animation:none; }
+    .plane-group{ display:none; }
   }
 </style>
 </head>
 <body>
+
+<div class="sky-bg" aria-hidden="true">
+  <div class="cloud cloud-1"></div>
+  <div class="cloud cloud-2"></div>
+  <div class="cloud cloud-3"></div>
+  <div class="plane-group">
+    <span class="trail"></span>
+    <svg class="plane-icon" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M21,16V14L13,9V3.5C13,2.67 12.33,2 11.5,2C10.67,2 10,2.67 10,3.5V9L2,14V16L10,13.5V19L7.5,20.5V22L11.5,21L15.5,22V20.5L13,19V13.5L21,16Z"/>
+    </svg>
+  </div>
+</div>
 
 <div class="container">
 
