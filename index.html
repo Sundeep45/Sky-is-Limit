@@ -261,6 +261,21 @@
   .btn-payment{ --hover:var(--violet); }
   .btn-payment .icon{ color:var(--violet); }
 
+  .payment-block{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .payment-note{
+    font-size:0.78rem;
+    font-style:italic;
+    line-height:1.45;
+    color:var(--text-dim);
+    text-align:center;
+    margin-top:8px;
+    padding:0 12px;
+  }
+
   /* Tertiary — ghost */
   .btn-email{
     background:transparent;
@@ -362,10 +377,13 @@
     </a>
 
     <!-- IMPORTANT: Replace sandeepvinci@okhdfcbank below with your actual UPI ID -->
-    <a href="upi://pay?pa=sandeepvinci@okhdfcbank&pn=Sandeep%20Vinci&cu=INR" class="link-btn btn-secondary btn-payment">
-      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
-      Secure Payment via UPI
-    </a>
+    <div class="payment-block">
+      <a href="upi://pay?pa=sandeepvinci@okhdfcbank&pn=Sandeep%20Vinci&am=499&cu=INR" class="link-btn btn-secondary btn-payment">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+        Buy me a Chai & Biryani
+      </a>
+      <p class="payment-note">Mentorship is free. My biryani cravings aren't — help a mentor eat well.</p>
+    </div>
 
     <a href="mailto:sandeepvinci063@gmail.com?subject=Sky Is Limit Mentorship Inquiry" class="link-btn btn-email">
       <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"></path><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
